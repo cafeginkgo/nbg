@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<!-- محتویات از نسخه ویرایش شده در Canvas جایگزین شده است -->
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Ginkgo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #dff0d8, #b4e197);
+            color: #2d472c;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 50px 20px 20px;
+            background-image: url('https://cdn.pixabay.com/photo/2020/09/26/10/03/ginkgo-5604210_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #a6cf98;
+            padding: 10px 0;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            margin: 0 15px;
+            cursor: pointer;
+            color: #2d472c;
+            font-weight: bold;
+        }
+
+        nav button:hover {
+            text-decoration: underline;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .active {
+            display: block;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>کافه گینکگو</h1>
+        <p>کافه‌ای دنج در دل طبیعت، با طعم آرامش و عطر برگ‌های گینکگو</p>
+    </header>
+
+    <nav>
+        <button onclick="openTab('home')">خانه</button>
+        <button onclick="openTab('about')">درباره ما</button>
+        <button onclick="openTab('menu')">منو</button>
+        <button onclick="openTab('gallery')">گالری</button>
+        <button onclick="openTab('contact')">ساعت کاری</button>
+    </nav>
+
+    <section id="home" class="tab-content active">
+        <h2>خوش آمدید!</h2>
+        <p>از حضور گرم شما در کافه گینکگو سپاسگزاریم. جایی برای آرامش، قهوه و گل‌ها.</p>
+    </section>
+
+    <section id="about" class="tab-content">
+        <h2>درباره کافه</h2>
+        <p>کافه گینکگو با الهام از طبیعت و انرژی مثبت برگ‌های گینکگو طراحی شده است. فضایی سبز، آرام و دل‌نشین برای وقت‌گذرانی شما.</p>
+    </section>
+
+    <section id="menu" class="tab-content">
+        <h2>منو</h2>
+        <div class="menu-item"><span>اسپرسو</span><span>40,000 تومان</span></div>
+        <div class="menu-item"><span>کاپوچینو</span><span>45,000 تومان</span></div>
+        <div class="menu-item"><span>لاته</span><span>50,000 تومان</span></div>
+        <div class="menu-item"><span>چای سبز با نعناع</span><span>35,000 تومان</span></div>
+        <div class="menu-item"><span>کیک لیمویی</span><span>55,000 تومان</span></div>
+    </section>
+
+    <section id="gallery" class="tab-content">
+        <h2>گالری تصاویر</h2>
+        <p>به زودی تصاویر زیبایی از فضای کافه اینجا قرار خواهد گرفت 🌿</p>
+    </section>
+
+    <section id="contact" class="tab-content">
+        <h2>ساعت کاری و تماس</h2>
+        <p>ساعت کاری: همه‌روزه از ۸ صبح تا ۱۰ شب</p>
+        <p>آدرس: خیابان طبیعت، نبش کوچه آرامش</p>
+        <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+    </section>
+
+    <script>
+        function openTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
